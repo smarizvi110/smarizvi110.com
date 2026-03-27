@@ -1,0 +1,69 @@
+# =========================
+# OS / System Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Editor / IDE
+# =========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# # =========================
+# # Node / Frontend Tooling
+# # =========================
+# node_modules/
+# npm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
+# pnpm-debug.log*
+
+# # Build outputs (if using bundlers)
+# dist/
+# build/
+# .out/
+# .cache/
+# .next/
+# .nuxt/
+
+# =========================
+# Jekyll (GitHub Pages default)
+# =========================
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+*.env
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Temporary / Misc
+# =========================
+tmp/
+temp/
+*.tmp
+
+# =========================
+# Custom / Project-specific
+# =========================
+chat.json
+*.local.json
+private/
+secrets/
