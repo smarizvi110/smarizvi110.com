@@ -287,16 +287,23 @@
 
     <!-- Footer Links & Identifiers -->
     <g transform="translate(100, 980)">
-      <text class="footer-text" x="0" y="0">smarizvi110.github.io</text>
+      <!-- Website link -->
+      <a href="https://smarizvi110.com" target="_blank">
+        <text class="footer-text" x="0" y="0">smarizvi110.com</text>
+      </a>
 
-      <line x1="230" y1="-18" x2="230" y2="4" stroke="#D4D4D2" stroke-width="1.5" />
+      <line x1="170" y1="-18" x2="170" y2="4" stroke="#D4D4D2" stroke-width="1.5" />
 
-      <!-- ORCID Icon (Soft Gray to perfectly match bottom corner aesthetics) -->
-      <g transform="translate(250, -16) scale(0.04)" fill="#666666">
-        <path d="M294.7 188.2l-45.9 0 0 153.8 47.5 0c67.6 0 83.1-51.3 83.1-76.9 0-41.6-26.5-76.9-84.7-76.9zM256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496zM175.2 368.8l-29.8 0 0-207.5 29.8 0 0 207.5zM160.3 98.5a19.6 19.6 0 1 1 0 39.2 19.6 19.6 0 1 1 0-39.2zM300 369l-81 0 0-207.7 80.6 0c76.7 0 110.4 54.8 110.4 103.9 0 53.3-41.7 103.9-110 103.9z"/>
-      </g>
+      <!-- ORCID icon + ID link -->
+      <a href="https://orcid.org/0009-0004-1491-4839" target="_blank">
 
-      <text class="footer-text" x="280" y="0">0009-0004-1491-4839</text>
+        <!-- ORCID Icon (Soft Gray to perfectly match bottom corner aesthetics) -->
+        <g transform="translate(185, -17) scale(0.04)" fill="#666666">
+          <path d="M294.7 188.2l-45.9 0 0 153.8 47.5 0c67.6 0 83.1-51.3 83.1-76.9 0-41.6-26.5-76.9-84.7-76.9zM256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496zM175.2 368.8l-29.8 0 0-207.5 29.8 0 0 207.5zM160.3 98.5a19.6 19.6 0 1 1 0 39.2 19.6 19.6 0 1 1 0-39.2zM300 369l-81 0 0-207.7 80.6 0c76.7 0 110.4 54.8 110.4 103.9 0 53.3-41.7 103.9-110 103.9z"/>
+        </g>
+
+        <text class="footer-text" x="215" y="0">0009-0004-1491-4839</text>
+      </a>
     </g>
   </g>
 
