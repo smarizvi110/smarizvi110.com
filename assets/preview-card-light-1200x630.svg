@@ -1,0 +1,306 @@
+<svg viewBox="0 0 1200 630" width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Embedded Web Fonts -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Merriweather:wght@700&amp;display=swap');
+    
+    .main-title {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 68px;
+      font-weight: 700;
+      fill: #222222;
+      letter-spacing: -0.5px;
+    }
+    .subtitle {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      fill: #C04040;
+      letter-spacing: 0.5px;
+    }
+    .footer-text {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      fill: #666666;
+    }
+  </style>
+
+  <defs>
+    <!-- Background subtle lighting -->
+    <radialGradient id="bgGrad" cx="30%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F7F7F5" />
+    </radialGradient>
+
+    <!-- Fade gradients for lines entering the empty left space -->
+    <linearGradient id="fadeLeft" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#D4D4D2" stop-opacity="1" />
+      <stop offset="100%" stop-color="#D4D4D2" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="fadeLeftFaint" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#D4D4D2" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#D4D4D2" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- AI Data Flow Gradients (Muted Carmine Red) -->
+    <linearGradient id="flowRed1" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C04040" stop-opacity="0" />
+      <stop offset="35%" stop-color="#C04040" stop-opacity="0.6" />
+      <stop offset="70%" stop-color="#C04040" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#C04040" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="flowRed2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C04040" stop-opacity="0" />
+      <stop offset="50%" stop-color="#C04040" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#C04040" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="flowRed3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C04040" stop-opacity="0" />
+      <stop offset="60%" stop-color="#C04040" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#C04040" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Soft Glow Filter for nodes and active data paths -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Minimalist background grid pattern -->
+    <pattern id="dotGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#E4E4E2" />
+    </pattern>
+
+    <!-- Grid Fade Mask -->
+    <linearGradient id="gridFadeMaskGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="30%" stop-color="#000000" />
+      <stop offset="70%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <mask id="gridMask">
+      <rect x="0" y="0" width="1920" height="1080" fill="url(#gridFadeMaskGrad)" />
+    </mask>
+  </defs>
+
+  <!-- Scale and re-center the entire 1080p geometry to perfectly fit 1200x630 (cropping exactly 22.5px off top/bottom backgrounds to preserve perfect aspect ratio) -->
+  <g transform="translate(0, -22.5) scale(0.625)">
+
+    <!-- Base Wallpaper Background -->
+    <rect x="0" y="0" width="1920" height="1080" fill="url(#bgGrad)" />
+
+    <!-- Subtle Dot Grid (Only visible on the right half) -->
+    <rect x="0" y="0" width="1920" height="1080" fill="url(#dotGrid)" mask="url(#gridMask)" opacity="0.6" />
+
+    <!-- LONG HORIZONTAL TIES (Fading completely to the left, leaving center/left empty) -->
+    <g stroke-width="0.8">
+      <line x1="0" y1="580" x2="1050" y2="580" stroke="url(#fadeLeftFaint)" stroke-dasharray="4 16" />
+      <line x1="0" y1="380" x2="1320" y2="380" stroke="url(#fadeLeftFaint)" stroke-dasharray="2 8" />
+      <line x1="0" y1="880" x2="1220" y2="880" stroke="url(#fadeLeftFaint)" stroke-dasharray="8 24" />
+      <!-- Solid anchor lines fading out -->
+      <line x1="1150" y1="180" x2="650" y2="180" stroke="url(#fadeLeft)" />
+      <line x1="1320" y1="380" x2="800" y2="380" stroke="url(#fadeLeft)" />
+      <line x1="1050" y1="580" x2="500" y2="580" stroke="url(#fadeLeft)" stroke-width="1.2" />
+      <line x1="1220" y1="880" x2="600" y2="880" stroke="url(#fadeLeft)" />
+      <!-- Angled tie-ins -->
+      <line x1="1050" y1="580" x2="700" y2="350" stroke="url(#fadeLeft)" />
+      <line x1="1220" y1="880" x2="800" y2="1100" stroke="url(#fadeLeft)" />
+    </g>
+
+    <!-- DISTRIBUTED SYSTEMS GEOMETRY (Main Network Mesh on the right side) -->
+    <g fill="#EBEBE9">
+      <polygon points="1320,380 1380,620 1620,280" opacity="0.4" />
+      <polygon points="1380,620 1680,550 1520,820" opacity="0.3" />
+      <polygon points="1150,180 1320,380 1450,120" opacity="0.2" />
+      <polygon points="1220,880 1380,620 1520,820" opacity="0.25" />
+      <polygon points="1620,280 1850,150 1680,550" opacity="0.2" />
+    </g>
+
+    <!-- Connection Edges (Clean Soft Grays) -->
+    <g stroke="#D4D4D2" stroke-width="1.2">
+      <line x1="1150" y1="180" x2="1450" y2="120" />
+      <line x1="1150" y1="180" x2="1320" y2="380" />
+      <line x1="1450" y1="120" x2="1320" y2="380" />
+      <line x1="1450" y1="120" x2="1620" y2="280" />
+      <line x1="1320" y1="380" x2="1620" y2="280" />
+      <line x1="1620" y1="280" x2="1850" y2="150" />
+      <line x1="1450" y1="120" x2="1850" y2="150" />
+      <line x1="1320" y1="380" x2="1050" y2="580" />
+      <line x1="1320" y1="380" x2="1380" y2="620" />
+      <line x1="1050" y1="580" x2="1380" y2="620" />
+      <line x1="1620" y1="280" x2="1380" y2="620" />
+      <line x1="1620" y1="280" x2="1680" y2="550" />
+      <line x1="1380" y1="620" x2="1680" y2="550" />
+      <line x1="1850" y1="150" x2="1680" y2="550" />
+      <line x1="1850" y1="150" x2="1880" y2="480" />
+      <line x1="1680" y1="550" x2="1880" y2="480" />
+      <line x1="1050" y1="580" x2="1220" y2="880" />
+      <line x1="1380" y1="620" x2="1220" y2="880" />
+      <line x1="1380" y1="620" x2="1520" y2="820" />
+      <line x1="1220" y1="880" x2="1520" y2="820" />
+      <line x1="1680" y1="550" x2="1520" y2="820" />
+      <line x1="1680" y1="550" x2="1780" y2="800" />
+      <line x1="1880" y1="480" x2="1780" y2="800" />
+      <line x1="1520" y1="820" x2="1780" y2="800" />
+      <line x1="1220" y1="880" x2="1420" y2="1020" />
+      <line x1="1520" y1="820" x2="1420" y2="1020" />
+      <line x1="1780" y1="800" x2="1820" y2="1000" />
+      <line x1="1420" y1="1020" x2="1820" y2="1000" />
+    </g>
+
+    <!-- Detailed Academic Sub-Clusters (Small mesh systems) -->
+    <g stroke="#D4D4D2" stroke-width="0.8">
+      <polygon points="1420,90 1480,100 1460,150" fill="#EAEAEA" opacity="0.4" />
+      <line x1="1450" y1="120" x2="1420" y2="90" />
+      <line x1="1450" y1="120" x2="1480" y2="100" />
+      <line x1="1450" y1="120" x2="1460" y2="150" />
+      <line x1="1420" y1="90" x2="1480" y2="100" />
+      <line x1="1480" y1="100" x2="1460" y2="150" />
+      <line x1="1460" y1="150" x2="1420" y2="90" />
+      <circle cx="1420" cy="90" r="2" fill="#A0A0A0" stroke="none" />
+      <circle cx="1480" cy="100" r="1.5" fill="#A0A0A0" stroke="none" />
+      <circle cx="1460" cy="150" r="2" fill="#A0A0A0" stroke="none" />
+    </g>
+    <g stroke="#D4D4D2" stroke-width="0.8">
+      <line x1="1780" y1="800" x2="1810" y2="770" />
+      <line x1="1780" y1="800" x2="1750" y2="750" />
+      <line x1="1810" y1="770" x2="1750" y2="750" />
+      <line x1="1810" y1="770" x2="1850" y2="810" />
+      <circle cx="1810" cy="770" r="1.5" fill="#B0B0B0" stroke="none" />
+      <circle cx="1750" cy="750" r="2" fill="#B0B0B0" stroke="none" />
+      <circle cx="1850" cy="810" r="1.5" fill="#B0B0B0" stroke="none" />
+    </g>
+
+    <!-- AI DATA FLOWS (Organic glowing sweeping paths) -->
+    <path d="M 650,950 C 850,850 950,680 1050,580 C 1150,480 1250,650 1380,620 C 1510,590 1550,350 1620,280 C 1690,210 1750,180 1850,150" fill="none" stroke="url(#flowRed1)" stroke-width="2" filter="url(#glow)" />
+    <path d="M 650,950 C 850,850 950,680 1050,580 C 1150,480 1250,650 1380,620 C 1510,590 1550,350 1620,280 C 1690,210 1750,180 1850,150" fill="none" stroke="#C04040" stroke-width="1.2" stroke-dasharray="4 16" opacity="0.6" />
+    <path d="M 500,400 C 750,420 1000,320 1150,180 C 1250,80 1350,150 1450,120 C 1550,90 1750,100 1900,100" fill="none" stroke="url(#flowRed2)" stroke-width="1.5" filter="url(#subtleGlow)" />
+    <path d="M 900,1100 C 1050,980 1120,920 1220,880 C 1320,840 1450,920 1520,820 C 1590,720 1650,580 1680,550 C 1720,510 1800,490 1880,480" fill="none" stroke="url(#flowRed3)" stroke-width="1.5" filter="url(#glow)" />
+
+    <!-- DATA PACKETS (Thick glowing red segments directly on structural network lines) -->
+    <g stroke="#C04040" stroke-width="2.5" filter="url(#subtleGlow)">
+      <line x1="1344" y1="476" x2="1350" y2="500" />
+      <line x1="1560" y1="578" x2="1590" y2="571" />
+      <line x1="1101" y1="670" x2="1118" y2="700" />
+      <line x1="1712" y1="228" x2="1735" y2="215" />
+    </g>
+
+    <!-- ABSTRACT GEOMETRIC ACCENTS -->
+    <g transform="translate(1680, 550)">
+      <circle cx="0" cy="0" r="30" fill="none" stroke="#D0D0D0" stroke-width="1" stroke-dasharray="10 20 50 15" transform="rotate(45)" />
+      <circle cx="0" cy="0" r="45" fill="none" stroke="#E4E4E2" stroke-width="0.8" stroke-dasharray="30 15 5 10" transform="rotate(-30)" />
+    </g>
+    <circle cx="1320" cy="380" r="28" fill="none" stroke="#D0D0CE" stroke-width="1" stroke-dasharray="5 15" />
+    <circle cx="1320" cy="380" r="40" fill="none" stroke="#D8D8D6" stroke-width="0.5" />
+    <circle cx="1520" cy="820" r="22" fill="none" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="40 10 5 10" />
+
+    <!-- NODES -->
+    <g fill="#F7F7F5" stroke="#B0B0B0" stroke-width="1.5">
+      <circle cx="1150" cy="180" r="4.5" />
+      <circle cx="1450" cy="120" r="4.5" />
+      <circle cx="1850" cy="150" r="4" />
+      <circle cx="1050" cy="580" r="4.5" />
+      <circle cx="1880" cy="480" r="4" />
+      <circle cx="1220" cy="880" r="4.5" />
+      <circle cx="1780" cy="800" r="4.5" />
+      <circle cx="1420" cy="1020" r="4" />
+      <circle cx="1820" cy="1000" r="4" />
+    </g>
+
+    <!-- Hub Nodes -->
+    <circle cx="1380" cy="620" r="8" fill="#F7F7F5" stroke="#C04040" stroke-width="2" filter="url(#subtleGlow)" />
+    <circle cx="1380" cy="620" r="3" fill="#C04040" />
+    <circle cx="1380" cy="620" r="18" fill="none" stroke="#C04040" stroke-width="0.5" opacity="0.6" />
+
+    <circle cx="1680" cy="550" r="5" fill="#C04040" filter="url(#subtleGlow)" stroke="none" />
+    <circle cx="1680" cy="550" r="14" fill="none" stroke="#C04040" stroke-width="1" opacity="0.4" />
+
+    <circle cx="1620" cy="280" r="6" fill="#F7F7F5" stroke="#A0A0A0" stroke-width="2" />
+    <circle cx="1620" cy="280" r="15" fill="none" stroke="#D0D0D0" stroke-width="1" />
+    <circle cx="1620" cy="280" r="2" fill="#A0A0A0" stroke="none" />
+
+    <circle cx="1520" cy="820" r="7" fill="#F7F7F5" stroke="#A0A0A0" stroke-width="1.5" />
+    <circle cx="1520" cy="820" r="3" fill="#C04040" stroke="none" />
+
+    <circle cx="1320" cy="380" r="5" fill="#B0B0B0" stroke="none" />
+    <circle cx="1320" cy="380" r="20" fill="none" stroke="#D4D4D2" stroke-width="1" stroke-dasharray="3 4" />
+
+    <!-- SCATTERED MICRO-DATA PARTICLES -->
+    <g fill="#C04040" opacity="0.75" stroke="none">
+      <circle cx="1250" cy="280" r="1.5" />
+      <circle cx="1480" cy="450" r="2" filter="url(#subtleGlow)" />
+      <circle cx="1720" cy="380" r="1.5" />
+      <circle cx="1580" cy="680" r="2" />
+      <circle cx="1300" cy="750" r="1.5" />
+      <circle cx="1650" cy="900" r="2.5" filter="url(#subtleGlow)" />
+      <circle cx="1120" cy="480" r="1.5" />
+    </g>
+    <g fill="#A0A0A0" opacity="0.5" stroke="none">
+      <circle cx="1400" cy="250" r="1.5" />
+      <circle cx="1550" cy="180" r="1.5" />
+      <circle cx="1800" cy="350" r="2" />
+      <circle cx="1180" cy="720" r="1.5" />
+      <circle cx="1350" cy="950" r="2" />
+      <circle cx="1480" cy="600" r="1.5" />
+    </g>
+
+    <!-- SOPHISTICATED UI/ACADEMIC ELEMENTS -->
+    <path d="M 1795 200 L 1805 200 M 1800 195 L 1800 205" stroke="#A0A0A0" stroke-width="1" fill="none" />
+    <path d="M 1195 300 L 1205 300 M 1200 295 L 1200 305" stroke="#A0A0A0" stroke-width="1" fill="none" />
+    <path d="M 1595 750 L 1605 750 M 1600 745 L 1600 755" stroke="#C04040" stroke-width="1" fill="none" opacity="0.8" />
+    <path d="M 1120 780 L 1130 780 M 1125 775 L 1125 785" stroke="#C04040" stroke-width="0.8" fill="none" opacity="0.6" />
+
+    <path d="M 1605 265 L 1600 265 L 1600 270 M 1635 265 L 1640 265 L 1640 270 M 1605 295 L 1600 295 L 1600 290 M 1635 295 L 1640 295 L 1640 290" fill="none" stroke="#B0B0B0" stroke-width="1" />
+    <path d="M 1205 865 L 1200 865 L 1200 870 M 1235 865 L 1240 865 L 1240 870 M 1205 895 L 1200 895 L 1200 890 M 1235 895 L 1240 895 L 1240 890" fill="none" stroke="#B0B0B0" stroke-width="1" opacity="0.7" />
+
+    <g transform="translate(1700, 950)" opacity="0.45">
+      <line x1="0" y1="0" x2="140" y2="0" stroke="#B0B0B0" stroke-width="1" />
+      <line x1="0" y1="0" x2="0" y2="-30" stroke="#B0B0B0" stroke-width="1" />
+      <polyline points="0,-10 20,-15 40,-5 60,-25 80,-20 100,-35 120,-30 140,-45" fill="none" stroke="#C04040" stroke-width="1.2" stroke-linejoin="round" />
+      <g stroke="#A0A0A0" stroke-width="2" stroke-dasharray="2 4 6 2 8 4" opacity="0.5">
+        <line x1="10" y1="10" x2="130" y2="10" />
+        <line x1="10" y1="16" x2="90" y2="16" />
+      </g>
+    </g>
+    
+    <g transform="translate(1820, 80)" opacity="0.3">
+      <rect x="0" y="0" width="4" height="4" fill="#C04040" />
+      <rect x="6" y="0" width="12" height="4" fill="#A0A0A0" />
+      <rect x="20" y="0" width="4" height="4" fill="#A0A0A0" />
+      <rect x="0" y="6" width="18" height="4" fill="#A0A0A0" />
+      <rect x="20" y="6" width="8" height="4" fill="#C04040" />
+    </g>
+
+    <!-- TYPOGRAPHY / TEXT OVERLAYS (Left Center & Bottom) -->
+    
+    <!-- Main Name & Subtitle -->
+    <g transform="translate(100, 520)">
+      <text class="main-title" x="0" y="0">Syed Muhammad Aqdas Rizvi</text>
+      <text class="subtitle" x="5" y="45">Computer Science Researcher | Systems, Networks, HCI &amp; Applied AI</text>
+    </g>
+
+    <!-- Footer Links & Identifiers -->
+    <g transform="translate(100, 980)">
+      <text class="footer-text" x="0" y="0">smarizvi110.github.io</text>
+
+      <line x1="230" y1="-18" x2="230" y2="4" stroke="#D4D4D2" stroke-width="1.5" />
+
+      <!-- ORCID Icon (Soft Gray to perfectly match bottom corner aesthetics) -->
+      <g transform="translate(250, -16) scale(0.04)" fill="#666666">
+        <path d="M294.7 188.2l-45.9 0 0 153.8 47.5 0c67.6 0 83.1-51.3 83.1-76.9 0-41.6-26.5-76.9-84.7-76.9zM256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496zM175.2 368.8l-29.8 0 0-207.5 29.8 0 0 207.5zM160.3 98.5a19.6 19.6 0 1 1 0 39.2 19.6 19.6 0 1 1 0-39.2zM300 369l-81 0 0-207.7 80.6 0c76.7 0 110.4 54.8 110.4 103.9 0 53.3-41.7 103.9-110 103.9z"/>
+      </g>
+
+      <text class="footer-text" x="280" y="0">0009-0004-1491-4839</text>
+    </g>
+  </g>
+
+  <!-- Outer 2px Light Carmine Red Border (Drawn natively at exactly 1200x630 to stay crisp) -->
+  <rect x="1" y="1" width="1198" height="628" fill="none" stroke="#C04040" stroke-width="2" />
+
+</svg>

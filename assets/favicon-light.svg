@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Pure White Background -->
+  <!-- <rect width="512" height="512" fill="#FFFFFF"/> -->
+
+  <!-- STRUCTURAL CUBE / NODE FRAME (Solid Dark Charcoal Grey #111111) -->
+  <g stroke="#111111" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    
+    <!-- Outer Network Pins -->
+    <line x1="256" y1="56" x2="256" y2="16"/>
+    <line x1="82.8" y1="156" x2="48.2" y2="136"/>
+    <line x1="82.8" y1="356" x2="48.2" y2="376"/>
+    <line x1="256" y1="456" x2="256" y2="496"/>
+    <line x1="429.2" y1="156" x2="463.8" y2="136"/>
+    <line x1="429.2" y1="356" x2="463.8" y2="376"/>
+
+    <!-- Outer Hexagon -->
+    <polygon points="256,56 429.2,156 429.2,356 256,456 82.8,356 82.8,156"/>
+    
+    <!-- Inner Y-Axes (Separating the isometric faces) -->
+    <line x1="256" y1="256" x2="256" y2="456"/>      <!-- Center to Bottom -->
+    <line x1="256" y1="256" x2="82.8" y2="156"/>     <!-- Center to Top-Left -->
+    <line x1="256" y1="256" x2="429.2" y2="156"/>    <!-- Center to Top-Right -->
+  </g>
+
+  <!-- ENCODED PAYLOADS / TEXT (Carmine Red Accent #C04040 ONLY) -->
+  <!-- Scaled up significantly to reduce white space, perfectly centered with a clean safety margin -->
+  <g stroke="#C04040" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    
+    <!-- TOP FACE: "110" -->
+    <!-- Re-mapped to un-mirror the text and rotate it so the bottom faces the right isometric edge -->
+    <!-- Reading direction flows from the center up toward the top-right corner -->
+    <g transform="matrix(0.866025, 0.5, -0.866025, 0.5, 256, 56)">
+      <!-- 1 -->
+      <path d="M 70 180 L 30 160 L 170 160"/>
+      <!-- 1 -->
+      <path d="M 70 120 L 30 100 L 170 100"/>
+      <!-- 0 (Box + Terminal Diagonal Slash from Top-Right to Bottom-Left) -->
+      <path d="M 30 60 L 30 20 L 170 20 L 170 60 Z M 30 20 L 170 60"/>
+    </g>
+
+    <!-- LEFT FACE: "SMA" -->
+    <!-- Expanded bounds: X:[20, 180], Y:[30, 170]. Centered exactly at (100, 100) -->
+    <g transform="matrix(0.866025, 0.5, 0, 1, 82.8, 156)">
+      <!-- S -->
+      <path d="M 60 30 L 20 30 L 20 100 L 60 100 L 60 170 L 20 170"/>
+      <!-- M -->
+      <path d="M 75 170 L 75 30 L 100 100 L 125 30 L 125 170"/>
+      <!-- A -->
+      <path d="M 140 170 L 160 30 L 180 170 M 150 100 L 170 100"/>
+    </g>
+
+    <!-- RIGHT FACE: "RIZVI" -->
+    <!-- Expanded bounds: X:[20, 180], Y:[30, 170]. Centered exactly at (100, 100) -->
+    <g transform="matrix(0.866025, -0.5, 0, 1, 256, 256)">
+      <!-- R -->
+      <path d="M 20 170 L 20 30 L 56 30 L 56 100 L 20 100 M 38 100 L 56 170"/>
+      <!-- I -->
+      <path d="M 69 30 L 69 170"/>
+      <!-- Z -->
+      <path d="M 82 30 L 118 30 L 82 170 L 118 170"/>
+      <!-- V -->
+      <path d="M 131 30 L 149 170 L 167 30"/>
+      <!-- I -->
+      <path d="M 180 30 L 180 170"/>
+    </g>
+
+  </g>
+
+  <!-- TERMINAL NODES / DOTS (Solid Dark Charcoal Grey #111111 ONLY) -->
+  <g fill="#111111">
+    <!-- Outer Pin Terminators -->
+    <circle cx="256" cy="16" r="16"/>
+    <circle cx="48.2" cy="136" r="16"/>
+    <circle cx="48.2" cy="376" r="16"/>
+    <circle cx="256" cy="496" r="16"/>
+    <circle cx="463.8" cy="136" r="16"/>
+    <circle cx="463.8" cy="376" r="16"/>
+    
+    <!-- Central Hub Node -->
+    <circle cx="256" cy="256" r="16"/>
+  </g>
+</svg>
