@@ -277,6 +277,9 @@
       <rect x="20" y="6" width="8" height="4" fill="#C04040" />
     </g>
 
+    <!-- ACADEMIC/PERSONAL LOGO (Referenced externally from directory) -->
+    <image href="favicon-light.svg" x="90" y="250" width="160" height="160" />
+
     <!-- TYPOGRAPHY / TEXT OVERLAYS (Left Center & Bottom) -->
     
     <!-- Main Name & Subtitle -->
