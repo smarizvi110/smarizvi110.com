@@ -285,7 +285,7 @@
     <!-- Main Name & Subtitle -->
     <g transform="translate(100, 520)">
       <text class="main-title" x="0" y="0">Syed Muhammad Aqdas Rizvi</text>
-      <text class="subtitle" x="5" y="45">Computer Science Researcher | Systems, Networks, HCI &amp; Applied AI</text>
+      <text class="subtitle" x="5" y="45">Computer Science Researcher | Systems, Networks, HCI &amp; AI</text>
     </g>
 
     <!-- Footer Links & Identifiers -->
