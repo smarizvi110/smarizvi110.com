@@ -480,12 +480,20 @@ li + li {
 
 #news li {
   margin-bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: 115px minmax(0, 1fr);
+  column-gap: 0.5rem;
+  align-items: start;
 }
 
 #news .meta {
-  display: inline-block;
-  width: 115px;
-  margin-right: 0.5rem;
+  display: block;
+  width: auto;
+  margin-right: 0;
+}
+
+#news .news-text {
+  display: block;
 }
 
 .skills-category h3 {
@@ -494,4 +502,31 @@ li + li {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.research-subhead {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 1.25rem;
+  padding-left: 0;
+}
+
+.research-subhead::before {
+  content: none;
+}
+
+.research-subhead::marker {
+  color: var(--accent);
+  font-size: 1.2em;
+}
+
+.inline-nowrap {
+  white-space: nowrap;
 }
